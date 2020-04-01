@@ -1,0 +1,34 @@
+local M = {}
+
+local callbacks = {}
+
+function M.register(event, name, callback)
+    if not callbacks[event] then
+        callbacks[event] = {}
+    end
+    callbacks[event][name] = callback
+end
+
+function M.unregister(event, name)
+    if not callbacks[event] then
+        return
+    end
+    if not name then
+        callbacks[event] = {}
+    else
+        callbacks[event][name] = nil
+    end
+end
+
+function M.fire(event, ...)
+    if callbacks[event] then
+        for _, cb in pairs(callbacks[event]) do
+            local ok, err = pcall(cb, ...)
+            if not ok then
+                print(string.format("fire event %d error:%s", event, debug.traceback(coroutine.running(), err)))
+            end
+        end
+    end
+end
+
+return M

@@ -1,0 +1,20 @@
+print("_________________________________lua main Start")
+-- LUAMSG = require("LuaMsgId")
+-- require("HotFix")
+JSON = require("json")
+
+TIME = CS.UnrealM.ActionSequenceSystem.Instance
+-- TIME = CS.UnrealM.ActionSequenceSystemEx
+require("Test")
+-- CS.UnrealM.ActionSequenceSystem.Delayer(5,function ()
+-- 	print("lua main delay")
+-- end)
+-- local getHero = function (a)
+-- 	print(a[0])
+-- end
+-- CS.MessengerCenter.EventCenter.AddParamsListener(CS.MessengerCenter.CMSGID.GETNEWHERO,getHero)
+-- CS.MessengerCenter.EventCenter.RemoveListener(CS.MessengerCenter.GETNEWHERO,getHero)
+-- CS.MessengerCenter.EventCenter.BroadcastParams(LUAMSG.GETEXP,-20,20,30,40,50)
+
+
+

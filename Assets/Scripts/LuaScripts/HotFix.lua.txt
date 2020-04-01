@@ -1,0 +1,5 @@
+-- xlua.hotfix(CS.Test, "Add", function(self,a,b)
+-- 	print(self:BBB(a,b))
+-- 	return a-b
+-- end)
+
