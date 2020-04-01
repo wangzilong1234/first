@@ -24,6 +24,9 @@ public class test2 : MonoBehaviour
         });
 
         MessengerCenter.EventCenter.Broadcast(1,1111,2222,3333);
+        ActionSequenceSystem.Delayer(10,() => {
+            Log.Info("10 later");
+        });
     }
 
     private void OnEnable() {
