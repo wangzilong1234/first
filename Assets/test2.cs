@@ -13,8 +13,6 @@ public class test2 : MonoBehaviour
             Log.Info("{0}:{1}_____","你好","CODE");
             Log.Info(Time.realtimeSinceStartup.ToString());
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         MessengerCenter.EventCenter.Broadcast(1,1111,2222,3333);
         ActionSequenceSystem.Delayer(10,() => {
@@ -33,10 +31,6 @@ public class test2 : MonoBehaviour
             }
         });
         Log.Info("remove");
-=======
->>>>>>> parent of 66d6ec3... Update test2.cs
-=======
->>>>>>> parent of 66d6ec3... Update test2.cs
     }
 
     // Update is called once per frame
