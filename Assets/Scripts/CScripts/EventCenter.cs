@@ -6,12 +6,7 @@ using XLua;
 
 namespace MessengerCenter {
 
-    public enum CMSGID {
-        GETGOLD = 1,
-        GETNEWHERO = 2,
-    }
-
-    public delegate void CallBack();
+    //public delegate void CallBack();
    
     //public delegate void CallBack<T>(T arg);
   
@@ -23,7 +18,7 @@ namespace MessengerCenter {
     
     //public delegate void CallBack<T, X, Y, Z, W>(T arg1,X arg2,Y arg3,Z arg4,W arg5);
 
-    public delegate void ParamsCallBack(params object[] param);
+    public delegate void CallBack(params object[] param);
 
     public class EventCenter {
         private static Dictionary<int,Delegate> m_EventTable = new Dictionary<int,Delegate>();
@@ -55,10 +50,10 @@ namespace MessengerCenter {
             }
         }
         //no parameters
-        public static void AddListener(int eventType,CallBack callBack) {
-            OnListenerAdding(eventType,callBack);
-            m_EventTable[eventType]=(CallBack)m_EventTable[eventType]+callBack;
-        }
+        //public static void AddListener(int eventType,CallBack callBack) {
+        //    OnListenerAdding(eventType,callBack);
+        //    m_EventTable[eventType]=(CallBack)m_EventTable[eventType]+callBack;
+        //}
         ////Single parameters
         //public static void AddListener<T>(int eventType,CallBack<T> callBack) {
         //    OnListenerAdding(eventType,callBack);
@@ -84,17 +79,17 @@ namespace MessengerCenter {
         //    OnListenerAdding(eventType,callBack);
         //    m_EventTable[eventType]=(CallBack<T,X,Y,Z,W>)m_EventTable[eventType]+callBack;
         //}
-        public static void AddParamsListener(int eventType,ParamsCallBack callBack) {
+        public static void AddListener(int eventType,CallBack callBack) {
             OnListenerAdding(eventType,callBack);
-            m_EventTable[eventType]=(ParamsCallBack)m_EventTable[eventType]+callBack;
+            m_EventTable[eventType]=(CallBack)m_EventTable[eventType]+callBack;
         }
 
         //no parameters
-        public static void RemoveListener(int eventType,CallBack callBack) {
-            OnListenerRemoving(eventType,callBack);
-            m_EventTable[eventType]=(CallBack)m_EventTable[eventType]-callBack;
-            OnListenerRemoved(eventType);
-        }
+        //public static void RemoveListener(int eventType,CallBack callBack) {
+        //    OnListenerRemoving(eventType,callBack);
+        //    m_EventTable[eventType]=(CallBack)m_EventTable[eventType]-callBack;
+        //    OnListenerRemoved(eventType);
+        //}
         ////single parameters
         //public static void RemoveListener<T>(int eventType,CallBack<T> callBack) {
         //    OnListenerRemoving(eventType,callBack);
@@ -125,24 +120,24 @@ namespace MessengerCenter {
         //    m_EventTable[eventType]=(CallBack<T,X,Y,Z,W>)m_EventTable[eventType]-callBack;
         //    OnListenerRemoved(eventType);
         //}
-        public static void RemoveParamsListener(int eventType,ParamsCallBack callBack) {
+        public static void RemoveListener(int eventType,CallBack callBack) {
             OnListenerRemoving(eventType,callBack);
-            m_EventTable[eventType]=(ParamsCallBack)m_EventTable[eventType]-callBack;
+            m_EventTable[eventType]=(CallBack)m_EventTable[eventType]-callBack;
             OnListenerRemoved(eventType);
         }
 
         //no parameters
-        public static void Broadcast(int eventType) {
-            Delegate d;
-            if (m_EventTable.TryGetValue(eventType,out d)) {
-                CallBack callBack = d as CallBack;
-                if (callBack!=null) {
-                    callBack();
-                } else {
-                    //throw new Exception(string.Format("广播事件错误：事件{0}对应委托具有不同的类型",eventType));
-                }
-            }
-        }
+        //public static void Broadcast(int eventType) {
+        //    Delegate d;
+        //    if (m_EventTable.TryGetValue(eventType,out d)) {
+        //        CallBack callBack = d as CallBack;
+        //        if (callBack!=null) {
+        //            callBack();
+        //        } else {
+        //            //throw new Exception(string.Format("广播事件错误：事件{0}对应委托具有不同的类型",eventType));
+        //        }
+        //    }
+        //}
         //single parameters
         //public static void Broadcast<T>(int eventType,T arg) {
         //    Delegate d;
@@ -204,10 +199,10 @@ namespace MessengerCenter {
         //    }
         //}
 
-        public static void BroadcastParams(int eventType,params object[] param) {
+        public static void Broadcast(int eventType,params object[] param) {
             Delegate d;
             if (m_EventTable.TryGetValue(eventType,out d)) {
-                ParamsCallBack callBack = d as ParamsCallBack;
+                CallBack callBack = d as CallBack;
                 if (callBack!=null) {
                     callBack(param);
                 } else {
@@ -217,10 +212,10 @@ namespace MessengerCenter {
         }
 
         //no parameters
-        public static void AddListener(CMSGID eventType,CallBack callBack) {
-            OnListenerAdding((int)eventType,callBack);
-            m_EventTable[(int)eventType]=(CallBack)m_EventTable[(int)eventType]+callBack;
-        }
+        //public static void AddListener(CMSGID eventType,CallBack callBack) {
+        //    OnListenerAdding((int)eventType,callBack);
+        //    m_EventTable[(int)eventType]=(CallBack)m_EventTable[(int)eventType]+callBack;
+        //}
         ////Single parameters
         //public static void AddListener<T>(CMSGID eventType,CallBack<T> callBack) {
         //    OnListenerAdding((int)eventType,callBack);
@@ -246,17 +241,17 @@ namespace MessengerCenter {
         //    OnListenerAdding((int)eventType,callBack);
         //    m_EventTable[(int)eventType]=(CallBack<T,X,Y,Z,W>)m_EventTable[(int)eventType]+callBack;
         //}
-        public static void AddParamsListener(CMSGID eventType,ParamsCallBack callBack) {
-            OnListenerAdding((int)eventType,callBack);
-            m_EventTable[(int)eventType]=(ParamsCallBack)m_EventTable[(int)eventType]+callBack;
-        }
+        //public static void AddParamsListener(CMSGID eventType,ParamsCallBack callBack) {
+        //    OnListenerAdding((int)eventType,callBack);
+        //    m_EventTable[(int)eventType]=(ParamsCallBack)m_EventTable[(int)eventType]+callBack;
+        //}
 
         //no parameters
-        public static void RemoveListener(CMSGID eventType,CallBack callBack) {
-            OnListenerRemoving((int)eventType,callBack);
-            m_EventTable[(int)eventType]=(CallBack)m_EventTable[(int)eventType]-callBack;
-            OnListenerRemoved((int)eventType);
-        }
+        //public static void RemoveListener(CMSGID eventType,CallBack callBack) {
+        //    OnListenerRemoving((int)eventType,callBack);
+        //    m_EventTable[(int)eventType]=(CallBack)m_EventTable[(int)eventType]-callBack;
+        //    OnListenerRemoved((int)eventType);
+        //}
         ////single parameters
         //public static void RemoveListener<T>(CMSGID eventType,CallBack<T> callBack) {
         //    OnListenerRemoving((int)eventType,callBack);
@@ -287,24 +282,24 @@ namespace MessengerCenter {
         //    m_EventTable[(int)eventType]=(CallBack<T,X,Y,Z,W>)m_EventTable[(int)eventType]-callBack;
         //    OnListenerRemoved((int)eventType);
         //}
-        public static void RemoveParamsListener(CMSGID eventType,ParamsCallBack callBack) {
-            OnListenerRemoving((int)eventType,callBack);
-            m_EventTable[(int)eventType]=(ParamsCallBack)m_EventTable[(int)eventType]-callBack;
-            OnListenerRemoved((int)eventType);
-        }
+        //public static void RemoveParamsListener(CMSGID eventType,ParamsCallBack callBack) {
+        //    OnListenerRemoving((int)eventType,callBack);
+        //    m_EventTable[(int)eventType]=(ParamsCallBack)m_EventTable[(int)eventType]-callBack;
+        //    OnListenerRemoved((int)eventType);
+        //}
 
         //no parameters
-        public static void Broadcast(CMSGID eventType) {
-            Delegate d;
-            if (m_EventTable.TryGetValue((int)eventType,out d)) {
-                CallBack callBack = d as CallBack;
-                if (callBack!=null) {
-                    callBack();
-                } else {
-                    //throw new Exception(string.Format("广播事件错误：事件{0}对应委托具有不同的类型",eventType));
-                }
-            }
-        }
+        //public static void Broadcast(CMSGID eventType) {
+        //    Delegate d;
+        //    if (m_EventTable.TryGetValue((int)eventType,out d)) {
+        //        CallBack callBack = d as CallBack;
+        //        if (callBack!=null) {
+        //            callBack();
+        //        } else {
+        //            //throw new Exception(string.Format("广播事件错误：事件{0}对应委托具有不同的类型",eventType));
+        //        }
+        //    }
+        //}
         //single parameters
         //public static void Broadcast<T>(CMSGID eventType,T arg) {
         //    Delegate d;
@@ -366,17 +361,17 @@ namespace MessengerCenter {
         //    }
         //}
 
-        public static void BroadcastParams(CMSGID eventType,params object[] param) {
-            Delegate d;
-            if (m_EventTable.TryGetValue((int)eventType,out d)) {
-                ParamsCallBack callBack = d as ParamsCallBack;
-                if (callBack!=null) {
-                    callBack(param);
-                } else {
-                    //throw new Exception(string.Format("广播事件错误：事件{0}对应委托具有不同的类型",eventType));
-                }
-            }
-        }
+        //public static void BroadcastParams(CMSGID eventType,params object[] param) {
+        //    Delegate d;
+        //    if (m_EventTable.TryGetValue((int)eventType,out d)) {
+        //        ParamsCallBack callBack = d as ParamsCallBack;
+        //        if (callBack!=null) {
+        //            callBack(param);
+        //        } else {
+        //            //throw new Exception(string.Format("广播事件错误：事件{0}对应委托具有不同的类型",eventType));
+        //        }
+        //    }
+        //}
     }
 
 }
