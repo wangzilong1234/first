@@ -5,15 +5,6 @@ using UnrealM;
 
 public class test2 : MonoBehaviour
 {
-    private void Awake() {
-        MessengerCenter.EventCenter.AddListener(1,(data) => {
-            foreach (var item in data) {
-                Log.Info(item.ToString());
-            }
-
-        });
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +13,7 @@ public class test2 : MonoBehaviour
             Log.Info("{0}:{1}_____","你好","CODE");
             Log.Info(Time.realtimeSinceStartup.ToString());
         });
+<<<<<<< HEAD
 
         MessengerCenter.EventCenter.Broadcast(1,1111,2222,3333);
         ActionSequenceSystem.Delayer(10,() => {
@@ -40,6 +32,8 @@ public class test2 : MonoBehaviour
             }
         });
         Log.Info("remove");
+=======
+>>>>>>> parent of 66d6ec3... Update test2.cs
     }
 
     // Update is called once per frame
