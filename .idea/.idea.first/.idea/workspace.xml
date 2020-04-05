@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25d90fe9-9191-496d-a47d-c55bbc540f1f" name="Default Changelist" comment="" />
+    <list default="true" id="25d90fe9-9191-496d-a47d-c55bbc540f1f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Jpp.ActionSequence.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Jpp.ActionSequence.csprojAssemblyReference.cache" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +14,7 @@
     <session id="-531629095">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -26,15 +29,29 @@
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="asmdef" value="1" />
+          <entry key="cs" value="3" />
+          <entry key="json" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="AsmDef" value="1" />
+          <entry key="C#" value="3" />
+          <entry key="JSON" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CScripts/AnimatorFinishEventTrigger.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="483">
+              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
               <folding>
                 <marker date="1586077460933" expanded="false" signature="6:92" ph="..." />
                 <marker date="1586077460933" expanded="true" signature="189:2815" ph="{...}" />
@@ -55,13 +72,85 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/package.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Jpp.ActionSequence.asmdef">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1586070348480" expanded="true" signature="0:302" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Example/ActionSequenceHandleExample.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+              <folding>
+                <marker date="1586070348475" expanded="false" signature="6:33" ph="..." />
+                <marker date="1586070348475" expanded="true" signature="91:1083" ph="{...}" />
+                <marker date="1586070348475" expanded="true" signature="214:494" ph="{...}" />
+                <marker date="1586070348475" expanded="true" signature="229:411" ph="/* Notes：An instance must be preserved to manually stop an infinite loop sequence. ... */" />
+                <marker date="1586070348475" expanded="true" signature="521:991" ph="{...}" />
+                <marker date="1586070348475" expanded="true" signature="568:639" ph="{...}" />
+                <marker date="1586070348475" expanded="true" signature="681:985" ph="{...}" />
+                <marker date="1586070348475" expanded="true" signature="770:973" ph="{...}" />
+                <marker date="1586070348475" expanded="true" signature="864:959" ph="{...}" />
+                <marker date="1586070348475" expanded="true" signature="997:1081" ph="/* private void OnDestroy() ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Example/ActionSequenceSystemExample.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding>
+                <marker date="1586070348477" expanded="true" signature="0:299" ph="/* Copyright (c) 2018 ZhongShan KPP Technology Co ... */" />
+                <marker date="1586070348477" expanded="false" signature="307:334" ph="..." />
+                <marker date="1586070348477" expanded="true" signature="392:3196" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="495:1902" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="1968:3194" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="2071:2167" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="2242:2333" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="2375:2579" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="2667:2725" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="2815:2868" ph="{...}" />
+                <marker date="1586070348477" expanded="true" signature="2965:3072" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62B69941-494E-4CBA-BA8B-8498C2F6E213/9e/25f976cd/ActionSequenceSystemEx.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1145">
+              <caret line="164" column="20" lean-forward="true" selection-start-line="164" selection-start-column="20" selection-end-line="164" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62B69941-494E-4CBA-BA8B-8498C2F6E213/9e/25f976cd/ActionSequenceSystemEx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CScripts/AnimatorFinishEventTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Jpp.ActionSequence.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Example/ActionSequenceHandleExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Example/ActionSequenceSystemExample.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -76,7 +165,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1440" />
@@ -109,6 +198,13 @@
               <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
               <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
               <item name="ActionSequenceSystem" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="ActionSequenceSystem" type="1045f7f1:UnityExplorerNode" />
+              <item name="Example" type="1045f7f1:UnityExplorerNode" />
             </path>
           </expand>
           <select />
@@ -160,7 +256,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586077310499</updated>
-      <workItem from="1586077321542" duration="270000" />
+      <workItem from="1586077321542" duration="423000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1586077586746</created>
@@ -173,7 +269,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270000" />
+    <option name="totallyTimeSpent" value="423000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -192,11 +288,12 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32976446" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -237,8 +334,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CScripts/AnimatorFinishEventTrigger.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="483">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
           <folding>
             <marker date="1586077460933" expanded="false" signature="6:92" ph="..." />
             <marker date="1586077460933" expanded="true" signature="189:2815" ph="{...}" />
@@ -255,6 +352,64 @@
             <marker date="1586077460933" expanded="true" signature="1703:2660" ph="/* public void OnCustomEventByInt(int eventType) { ... */" />
             <marker date="1586077460933" expanded="true" signature="2719:2813" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Jpp.ActionSequence.asmdef">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1586070348480" expanded="true" signature="0:302" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Example/ActionSequenceHandleExample.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <marker date="1586070348475" expanded="false" signature="6:33" ph="..." />
+            <marker date="1586070348475" expanded="true" signature="91:1083" ph="{...}" />
+            <marker date="1586070348475" expanded="true" signature="214:494" ph="{...}" />
+            <marker date="1586070348475" expanded="true" signature="229:411" ph="/* Notes：An instance must be preserved to manually stop an infinite loop sequence. ... */" />
+            <marker date="1586070348475" expanded="true" signature="521:991" ph="{...}" />
+            <marker date="1586070348475" expanded="true" signature="568:639" ph="{...}" />
+            <marker date="1586070348475" expanded="true" signature="681:985" ph="{...}" />
+            <marker date="1586070348475" expanded="true" signature="770:973" ph="{...}" />
+            <marker date="1586070348475" expanded="true" signature="864:959" ph="{...}" />
+            <marker date="1586070348475" expanded="true" signature="997:1081" ph="/* private void OnDestroy() ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ActionSequenceSystem/Example/ActionSequenceSystemExample.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <marker date="1586070348477" expanded="true" signature="0:299" ph="/* Copyright (c) 2018 ZhongShan KPP Technology Co ... */" />
+            <marker date="1586070348477" expanded="false" signature="307:334" ph="..." />
+            <marker date="1586070348477" expanded="true" signature="392:3196" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="495:1902" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="1968:3194" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="2071:2167" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="2242:2333" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="2375:2579" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="2667:2725" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="2815:2868" ph="{...}" />
+            <marker date="1586070348477" expanded="true" signature="2965:3072" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62B69941-494E-4CBA-BA8B-8498C2F6E213/9e/25f976cd/ActionSequenceSystemEx.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1145">
+          <caret line="164" column="20" lean-forward="true" selection-start-line="164" selection-start-column="20" selection-end-line="164" selection-end-column="20" />
         </state>
       </provider>
     </entry>
