@@ -63,7 +63,7 @@ public class Log
     {
 #if SERVER
         return level.ToString();
-#elif UNITY
+#elif UNITY_EDITOR
         var now = DateTime.Now;
         return now.ToString("yyyy-MM-dd HH:mm:ss") + "." + now.Millisecond;
 #else
@@ -84,7 +84,7 @@ public class Log
                 if(!Slient) {
 #if SERVER
                     System.Console.WriteLine(msg);
-#elif UNITY                    
+#elif UNITY_EDITOR                    
                     UnityEngine.Debug.Log(msg);
 #else
 #error must define one of SERVER or UNITY
@@ -98,7 +98,7 @@ public class Log
                 if(!Slient) {
 #if SERVER
                     System.Console.WriteLine(msg);
-#elif UNITY
+#elif UNITY_EDITOR
                     UnityEngine.Debug.Log(msg);
 #else
 #error must define one of SERVER or UNITY
@@ -112,7 +112,7 @@ public class Log
                 if(!Slient) {
 #if SERVER
                     System.Console.WriteLine(msg);
-#elif UNITY
+#elif UNITY_EDITOR
                     UnityEngine.Debug.LogWarning(msg);
 #else
 #error must define one of SERVER or UNITY
@@ -126,7 +126,7 @@ public class Log
                 if(!Slient) {
 #if SERVER
                     System.Console.WriteLine(msg);
-#elif UNITY
+#elif UNITY_EDITOR
                     UnityEngine.Debug.LogError(msg);
 #else
 #error must define one of SERVER or UNITY
