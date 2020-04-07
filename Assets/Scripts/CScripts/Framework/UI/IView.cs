@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface  IView 
-{ 
-    void OnStart();
+namespace Game.UI
+{
+    public interface IView
+    {
+        void OnStart();
+        void OnClose();
+        void OnBack();
 
-    void OnClose();
-   
+    }
 }
+
+
