@@ -1,0 +1,111 @@
+local M = {}
+
+function M.FindTrans(trans, path)
+	return trans:Find(path)
+end
+
+function M.FindText(trans, path)
+	return FindComponent(trans, typeof(CS.UnityEngine.UI.Text), path)
+end
+
+function M.FindImage(trans, path)
+	return FindComponent(trans, typeof(CS.UnityEngine.UI.Image), path)
+end
+
+function M.FindButton(trans, path)
+	return FindComponent(trans, typeof(CS.UnityEngine.UI.Button), path)
+end
+
+function M.FindInput(trans, path)
+	return FindComponent(trans, typeof(CS.UnityEngine.UI.InputField), path)
+end
+
+function M.FindSlider(trans, path)
+	return FindComponent(trans, typeof(CS.UnityEngine.UI.Slider), path)
+end
+
+function M.FindScrollRect(trans, path)
+	return FindComponent(trans, typeof(CS.UnityEngine.UI.ScrollRect), path)
+end
+
+function M.RemoveAllChild(parent)
+    local childCount = parent.transform.childCount
+    if childCount > 0 then
+        for i = childCount, 1, -1 do
+            CS.UnityEngine.GameObject.DestroyImmediate(parent.transform:GetChild(i - 1).gameObject)
+        end
+    end
+end
+
+function M.AddChild(parent, prefab)
+    local go = CS.UnityEngine.GameObject.Instantiate(prefab);
+    if go and parent then
+        local t = go.transform
+        t.parent = parent.transform
+        t.localPosition = CS.UnityEngine.Vector3.zero
+        t.localRotation = CS.UnityEngine.Quaternion.identity
+        t.localScale = CS.UnityEngine.Vector3.one
+        go.layer = parent.layer
+    end
+    return go
+end
+
+function M.playAnimation(animator, clipName, aniEventTrigger, finishCallback)
+    if animator ~= nil then
+        animator:Play(clipName, -1, 0)
+    end
+
+    if aniEventTrigger ~= nil then
+        aniEventTrigger.OnFinishAnimation = function(aniName)
+            if finishCallback ~= nil and aniName == clipName then
+                finishCallback()
+            end
+        end
+    end
+end
+
+function M.DicToTable(CSharpDic)
+    local dic = {}
+    local index =1
+    local iter = CSharpDic:GetEnumerator()  
+    while iter:MoveNext() do
+        local v = iter.Current.Value
+        dic[index] = v
+        index = index + 1
+    end
+    return dic
+end
+
+function M.DicToArray(CSharpDic)
+    local dic = {}
+    local index =1
+    local iter = CSharpDic:GetEnumerator()  
+    while iter:MoveNext() do
+        local v = iter.Current.Value
+        table.insert(dic, v)
+        index = index + 1
+    end
+    return dic
+end
+
+function M.initUIVCP(uiVars, transform, result)
+    for _, v in ipairs(uiVars) do
+        local t = transform:Find(v.path)
+        if t then
+            if v.component == "GameObject" then
+                result[v.var] = t.gameObject
+            else
+                local c = t:GetComponent(v.component)
+                if c then
+                    result[v.var] = c
+                else
+                    CS.Log.Error("No {0} on {1}", v.component, v.path)
+                end
+            end
+        else
+            CS.Log.Error("Can't find {0} in {1}", v.path, transform.name)
+        end
+    end
+end
+
+return M
