@@ -1,0 +1,53 @@
+
+local M = M or {}
+
+local eventMap = {}
+
+function M.Fire(self,eventName,data)
+	local func = eventMap[eventName]
+	if func ~= nil and #func > 0 then
+		for i=1,#func do
+			func[i](data)
+		end
+	end
+end
+
+function M.Register(self,eventName,fun)
+	local func = eventMap[eventName]
+	if func == nil then
+		func = {}
+		eventMap[eventName] = func
+	end
+	local has = false
+	for i=1,#func do
+		if func[i] == fun then
+			has = true
+			break
+		end
+	end
+	if not has then
+		table.insert(func,fun)
+	end
+end
+
+function M.Unregister(self,eventName,fun)
+	local func = eventMap[eventName]
+	if func ~= nil then
+		for i=1,#func do
+			if func[i] == fun then
+				table.remove(func,i)
+				break
+			end
+		end
+	end
+end
+
+function M.UnregisterAllEvent(self,eventName,fun)
+	eventMap[eventName] = nil
+end
+
+function M.Clear(self)
+	eventMap = {}
+end
+
+return M

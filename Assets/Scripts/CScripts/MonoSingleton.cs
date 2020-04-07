@@ -25,7 +25,7 @@ public abstract class MonoSingleton<T>:MonoBehaviour where T : MonoSingleton<T> 
     }
 
     /*
-     * 没有任何实现的函数，用于保证MonoSingleton在使用前已创建
+     * 脙禄脫脨脠脦潞脦脢碌脧脰碌脛潞炉脢媒拢卢脫脙脫脷卤拢脰陇MonoSingleton脭脷脢鹿脫脙脟掳脪脩麓麓陆篓
      */
     public void Startup() {
 
