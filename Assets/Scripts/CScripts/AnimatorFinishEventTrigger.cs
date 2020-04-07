@@ -47,7 +47,7 @@ public class AnimatorFinishEventTrigger : MonoBehaviour {
     //}
 
     private void OnFinishAnimationTrigger(string name) {
-        StartCoroutine(DOOnFinishAnimation(name));
+        StartCoroutine(DoOnFinishAnimation(name));
     }
 
     //public void OnCustomEventByInt(int eventType) { 
@@ -83,7 +83,7 @@ public class AnimatorFinishEventTrigger : MonoBehaviour {
     //    CustomEventByParam = null;
     //}
 
-    IEnumerator DOOnFinishAnimation(string name) {
+    private IEnumerator DoOnFinishAnimation(string name) {
         yield return new WaitForEndOfFrame();
         OnFinishAnimation?.Invoke(name);
     }
