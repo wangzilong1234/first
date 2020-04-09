@@ -3,46 +3,33 @@ using UnityEngine;
 
 namespace Game.UI
 {
-    public class View : MonoBehaviour, IView
+    public abstract class View : MonoBehaviour
     {
-        public Animator animator;
-        public AnimatorFinishEventTrigger animatorTrigger;
-        public string showAnimName = "Open";
-        public string hideAnimName = "Close";
-        public event System.Action onStart;
-        public event System.Action onClose;
-        public virtual void OnStart() {
-
-        }
-        public virtual void OnClose() {
-
-        }
-        public virtual void OnBack()
-        {
-
-        }
+        //public Animator animator;
+        //public AnimatorFinishEventTrigger animatorTrigger;
+        //public string showAnimName = "Open";
+        //public string hideAnimName = "Close";
+        public event System.Action onStartEvent;
+        public event System.Action onCloseEvent;
+        public abstract void OnStart();
+        public abstract void OnShowUI();
+        public abstract void OnClose();
+        public abstract void OnBack();
         void Start()
         {
             OnStart();
-            onStart?.Invoke();
+            if (onStartEvent!=null) {
+                onCloseEvent();
+            }
         }
 
         private void OnDestroy()
         {
             OnClose();
-            onClose?.Invoke();
-        }
-
-        IEnumerator PlayAnimation()
-        {
-            if (animator != null && animatorTrigger != null)
-            {
-                UIHelper.PlayAnimator(animator, showAnimName, animatorTrigger, () => {
-
-                });
+            if (onCloseEvent!=null) {
+                onCloseEvent();
             }
-            yield return null;
-        }
+        }      
     }
 }
 

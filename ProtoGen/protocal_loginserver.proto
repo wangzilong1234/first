@@ -1,0 +1,5 @@
+message CS_LOGINSERVER  
+{  
+	required string s_account = 1;  //ÕËºÅ  
+	required string s_password = 2; //ÃÜÂë
+} 
