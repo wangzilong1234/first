@@ -14,7 +14,7 @@ public class UILayer : MonoBehaviour {
         layerName = layername;
         planeDistance = paneldistance;
         orderInLayer = orderinLayer;
-        UIHelper.SetParent(UIManager.Instance.uiRoot.transform, this.transform);
+        //UIHelper.SetParent(UIManager.Instance.uiRoot.transform, this.transform);
         this.gameObject.layer = layer;
         Canvas canvas = this.transform.GetComponent<Canvas>();
         if (canvas == null)
