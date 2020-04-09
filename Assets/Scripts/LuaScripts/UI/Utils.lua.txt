@@ -54,7 +54,6 @@ function M.playAnimation(animator, clipName, aniEventTrigger, finishCallback)
     if animator ~= nil then
         animator:Play(clipName, -1, 0)
     end
-
     if aniEventTrigger ~= nil then
         aniEventTrigger.OnFinishAnimation = function(aniName)
             if finishCallback ~= nil and aniName == clipName then
@@ -99,11 +98,11 @@ function M.initUIVCP(uiVars, transform, result)
                 if c then
                     result[v.var] = c
                 else
-                    CS.Log.Error("No {0} on {1}", v.component, v.path)
+                    Log.Error("No {0} on {1}", v.component, v.path)
                 end
             end
         else
-            CS.Log.Error("Can't find {0} in {1}", v.path, transform.name)
+            Log.Error("Can't find {0} in {1}", v.path, transform.name)
         end
     end
 end
