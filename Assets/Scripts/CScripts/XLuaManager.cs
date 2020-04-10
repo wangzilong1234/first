@@ -10,8 +10,8 @@ namespace Game
     {
         //public const string luaAssetbundleAssetName = "Lua";
         public const string luaScriptsFolder = "Scripts/LuaScripts";
-        //const string commonMainScriptName = "Common.Main";
-        const string gameMainScriptName = "GameMain";
+        const string commonMainScriptName = "CommonMain";
+        const string gameMainScriptName = "main";
         //const string hotfixMainScriptName = "XLua.HotfixMain";
         LuaEnv luaEnv = null;
         //LuaUpdater luaUpdater = null;
@@ -20,6 +20,7 @@ namespace Game
         {
             base.Init();
             InitLuaEnv();
+            OnInit();
         }
 
         public bool HasGameStart
@@ -39,7 +40,7 @@ namespace Game
             HasGameStart = false;
             if (luaEnv != null)
             {
-                luaEnv.AddLoader(CustomLoader);
+                luaEnv.AddLoader(CustomLoader);            
             }
             else
             {
@@ -51,7 +52,7 @@ namespace Game
         {
             if (luaEnv != null)
             {
-                //LoadScript(commonMainScriptName);
+                LoadScript(commonMainScriptName);
                 //luaUpdater = gameObject.GetComponent<LuaUpdater>();
                 //if (luaUpdater == null)
                 //{

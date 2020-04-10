@@ -1,6 +1,5 @@
-print("_________________________________lua main Start")
+
 JSON = require("json")
+Log  = CS.Game.Log
 
-
-
-
+Log.Info("Lua main Start !!!")
