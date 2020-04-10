@@ -1,0 +1,14 @@
+local M = {
+
+	Views = {
+		testHud = { name = "testHud",script = "UI/View/testHud",prefab ="Prefab/UI/testHud",isPreloading = true}
+
+	},
+
+	Canvas = {
+
+
+	},
+}
+
+return M

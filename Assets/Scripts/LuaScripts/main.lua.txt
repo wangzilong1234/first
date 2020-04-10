@@ -1,5 +1,4 @@
-
+require "ReadOnlyTable"
 JSON = require("json")
 Log  = CS.Game.Log
-
 Log.Info("Lua main Start !!!")

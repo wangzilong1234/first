@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public  enum Layer
+public enum Layer
 {
     LuanchLayer,
     SceneLayer,

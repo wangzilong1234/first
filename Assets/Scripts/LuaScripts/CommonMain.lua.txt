@@ -1,2 +1,3 @@
 -- script init lua plugins
 -- 类似C#的第三方库
+require "ReadOnlyTable"
